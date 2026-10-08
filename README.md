@@ -1,5 +1,15 @@
 # React + TypeScript + Vite
 
+## Supabase setup
+
+Set `VITE_SUPABASE_URL` and `VITE_SUPABASE_PUBLISHABLE_KEY` in `.env.local`.
+In the Supabase project's SQL Editor, run the SQL in [`supabase/schema.sql`](./supabase/schema.sql)
+to create and expose the goals and deposits tables to this no-login demo. The
+policies intentionally allow anyone with the public app key to read and change
+the shared demo data.
+
+Restart the Vite dev server after changing `.env.local`.
+
 This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
 Currently, two official plugins are available:

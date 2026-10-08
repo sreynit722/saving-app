@@ -19,6 +19,10 @@ create table if not exists public.deposits (
 alter table public.goals enable row level security;
 alter table public.deposits enable row level security;
 
+grant usage on schema public to anon;
+grant select, insert, update on public.goals to anon;
+grant select, insert on public.deposits to anon;
+
 drop policy if exists "public can read goals" on public.goals;
 drop policy if exists "public can create goals" on public.goals;
 drop policy if exists "public can update goals" on public.goals;
